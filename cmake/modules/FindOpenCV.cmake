@@ -115,8 +115,7 @@ SET(OpenCV_LIBDIR_SUFFIXES
 #DBG_MSG("OpenCV_LIBDIR_SUFFIXES=${OpenCV_LIBDIR_SUFFIXES}")
 
 
-SET(OpenCV_ROOT_DIR
-    /home/nolaan/Travail/Projets/Science_a_montsinery/Environnement_dev/projet/opencv-2.4.9/)
+
 #
 # find incdir for each lib
 #
@@ -237,12 +236,12 @@ SET(OPENCV_LIBRARIES
     /usr/lib64/)
 SET(OPENCV_INCLUDE_DIR
     /usr/include/opencv
-    /usr/include/opencv2)
-SET(OPENCV_FOUND ON)
+    /usr/include/opencv2 )
+SET(OpenCV_FOUND       ON)
 
 
 # display help message
-IF(NOT OPENCV_FOUND)
+IF(NOT OpenCV_FOUND)
   # make FIND_PACKAGE friendly
   IF(NOT OpenCV_FIND_QUIETLY)
     IF(OpenCV_FIND_REQUIRED)
@@ -253,5 +252,5 @@ IF(NOT OPENCV_FOUND)
         "ERROR: OpenCV was not found.")
     ENDIF(OpenCV_FIND_REQUIRED)
   ENDIF(NOT OpenCV_FIND_QUIETLY)
-ENDIF(NOT OPENCV_FOUND)
+ENDIF(NOT OpenCV_FOUND)
 

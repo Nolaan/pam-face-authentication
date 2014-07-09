@@ -97,7 +97,26 @@ TARGET_LINK_LIBRARIES( xwindowFaceAuth ${X11_LIBRARIES})
 
 ADD_EXECUTABLE( qt-facetrainer ${QT_FACETRAINER_SRCS} ${QT_FACETRAINER_MOC_SRCS} ${QT_FACETRAINER_RC_SRCS} ${QT_FACETRAINER_UI_HDRS} )
 TARGET_LINK_LIBRARIES( pam_face_authentication  ${PAM_LIBRARIES} ${OPENCV_LIBRARIES})
-TARGET_LINK_LIBRARIES( qt-facetrainer ${QT_LIBRARIES} ${OPENCV_LIBRARIES})
+TARGET_LINK_LIBRARIES( qt-facetrainer ${QT_LIBRARIES} ${OPENCV_LIBRARIES} 
+    -lopencv_core
+    -lopencv_calib3d    
+    -lopencv_contrib
+    -lopencv_core
+    -lopencv_features2d
+    -lopencv_flann
+    -lopencv_highgui
+    -lopencv_imgproc
+    -lopencv_legacy
+    -lopencv_ml
+    -lopencv_objdetect
+    -lopencv_ocl
+    -lopencv_photo
+    -lopencv_stitching
+    -lopencv_superres
+    -lopencv_ts
+    -lopencv_video
+    -lopencv_videostab
+    )
  
 if( UNIX AND NOT APPLE )
     if( NOT DESKTOP_ENTRY )

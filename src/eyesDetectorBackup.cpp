@@ -7,8 +7,8 @@
 double CenterofMass(IplImage* src,int flagXY);
 double difference(double * currentIntegralImage,double * integralImage,int size2, double px,double py);
 
-char *HAAR_CASCADE_EYE=PKGDATADIR "/haarcascade_eye_tree_eyeglasses.xml";
-char *HAAR_CASCADE_EYE_2=PKGDATADIR "/haarcascade_eye.xml";
+char *HAAR_CASCADE_EYE="../data/haarcascades/haarcascade_eye_tree_eyeglasses.xml";
+char *HAAR_CASCADE_EYE_2="../data/haarcascades/haarcascade_eye.xml";
 int checkBit(int i)
 {
 // Well Removing patterns with bits changing consecutively  more than twice

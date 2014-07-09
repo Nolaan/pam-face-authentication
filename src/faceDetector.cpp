@@ -24,7 +24,7 @@
 #include <stdio.h>
 
 // char* HAAR_CASCADE_FACE=PKGDATADIR "/haarcascade.xml";
-char* HAAR_CASCADE_FACE="/usr/share/OpenCV/haarcascades/haarcascade_frontalface_alt.xml";
+char* HAAR_CASCADE_FACE="../data/haarcascades/haarcascade.xml";
 
 int faceDetector::checkFaceDetected()
 {
@@ -81,11 +81,11 @@ void faceDetector::runFaceDetector(IplImage *input)
 
         CvSeq* faces = cvHaarDetectObjects( small_img, cascade, storage,
                                             1.4, 2, 0
-                                            |CV_HAAR_FIND_BIGGEST_OBJECT
+                                            // |CV_HAAR_FIND_BIGGEST_OBJECT
                                             //  |CV_HAAR_DO_ROUGH_SEARCH
 
-                                            // |CV_HAAR_DO_CANNY_PRUNING
-                                            |CV_HAAR_SCALE_IMAGE
+                                            |CV_HAAR_DO_CANNY_PRUNING
+                                            //|CV_HAAR_SCALE_IMAGE
                                             ,
                                             cvSize(80/scale, 80/scale) );
         int maxI=-1;
