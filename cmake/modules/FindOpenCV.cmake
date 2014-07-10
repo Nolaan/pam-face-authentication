@@ -233,6 +233,7 @@ SET(OPENCV_FOUND       ${OpenCV_FOUND})
 # Nolaan overide this, because it should rely on Linux FHS!!!
 
 SET(OPENCV_LIBRARIES   
+    /usr/lib
     /usr/lib64/)
 SET(OPENCV_INCLUDE_DIR
     /usr/include/opencv

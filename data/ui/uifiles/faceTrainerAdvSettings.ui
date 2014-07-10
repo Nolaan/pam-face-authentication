@@ -296,62 +296,6 @@ font: 22pt &quot;Serif&quot;;
     <string>Defaults</string>
    </property>
   </widget>
-  <widget class="QSlider" name="percentage">
-   <property name="geometry">
-    <rect>
-     <x>102</x>
-     <y>312</y>
-     <width>218</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string> QSlider::groove:horizontal {
-	 
-     border: 1px solid #999999;
-     height: 12px; /* the groove expands to the size of the slider by default. by giving it a height, it has a fixed size */
-     background: qlineargradient(spread:pad, x1:0.222, y1:0.591318, x2:0.928, y2:0.585, stop:0 rgba(255, 10, 0, 255), stop:0.494444 rgba(255, 231, 0, 255), stop:0.938889 rgba(122, 255, 0, 255));
-     margin: 2px 0;
- }
-
- QSlider::handle:horizontal {
-     background:  qlineargradient(spread:pad, x1:0.389, y1:0, x2:0.422, y2:0.698682, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(94, 94, 94, 255));
-     border: 1px solid #333333;
-     width: 18px;
-     margin: -2px 0; /* handle is placed by default on the contents rect of the groove. Expand outside the groove */
-     border-radius: 3px;
- }
-
-</string>
-   </property>
-   <property name="minimum">
-    <number>1</number>
-   </property>
-   <property name="maximum">
-    <number>90</number>
-   </property>
-   <property name="value">
-    <number>76</number>
-   </property>
-   <property name="tracking">
-    <bool>true</bool>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-   <property name="invertedAppearance">
-    <bool>false</bool>
-   </property>
-   <property name="invertedControls">
-    <bool>false</bool>
-   </property>
-   <property name="tickPosition">
-    <enum>QSlider::TicksAbove</enum>
-   </property>
-   <property name="tickInterval">
-    <number>10</number>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
@@ -366,6 +310,22 @@ font: 22pt &quot;Serif&quot;;
    </property>
    <property name="scaledContents">
     <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QSlider" name="percentage">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>320</y>
+     <width>281</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="sliderPosition">
+    <number>80</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
    </property>
   </widget>
  </widget>
